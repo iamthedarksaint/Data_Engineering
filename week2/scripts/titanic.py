@@ -31,8 +31,6 @@ class TitanicCleaner:
     logging.info("Filling missing values....")
     logging.info(data.isnull().sum())
 
-
-  
   def remove_duplicate(self):
     data = self.data
     # data = self.load_data()
