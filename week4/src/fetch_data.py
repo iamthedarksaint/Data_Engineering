@@ -29,7 +29,7 @@ def parquet(df: pd.DataFrame)-> None:
     try:
         print(df.head(2))
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S') 
-        df.to_parquet(f"week3/data/livescore_{timestamp}.parquet", engine="pyarrow")
+        df.to_parquet(f"week4/datalake/livescore_{timestamp}.parquet", engine="pyarrow")
         print(f"Data saved as parquet file.")
     except Exception as e:
         print(f"Error saving to parquet: {e}")
@@ -38,7 +38,7 @@ def parquet(df: pd.DataFrame)-> None:
 def excel(df: pd.DataFrame)-> None:
     try:
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S') 
-        df.to_excel(f"week3/data/livescore_{timestamp}.xlsx", index=False, engine="openpyxl")
+        df.to_excel(f"week4/datalake/livescore_{timestamp}.xlsx", index=False, engine="openpyxl")
         print(f"Data saved as Excel file.")
     except Exception as e:
         print(f"Error saving to Excel: {e}" )
