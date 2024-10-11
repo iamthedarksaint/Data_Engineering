@@ -2,7 +2,7 @@ import pandas as pd
 import argparse
 import logging
 
-logging.basicConfig(level=logging.INFO,filename="test.log", filemode="w", format="%(message)s")
+logging.basicConfig(level=logging.INFO,filename="week2/scripts/log.log", filemode="w", format="%(message)s")
 
 
 class TitanicCleaner:

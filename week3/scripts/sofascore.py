@@ -50,13 +50,14 @@ def main():
     excel(data)
 
 if __name__ == "__main__":
-    main.serve(schedules=[
-    IntervalSchedule(
-      interval=timedelta(seconds=60),
-        anchor_date=datetime(2024, 9, 29),
-        timezone="America/Chicago"
-        )
-    ]
-    )
+    main()
+    # main.serve(schedules=[
+    # IntervalSchedule(
+    #   interval=timedelta(seconds=60),
+    #     anchor_date=datetime(2024, 9, 29),
+    #     timezone="America/Chicago"
+    #     )
+    # ]
+    # )
     
     

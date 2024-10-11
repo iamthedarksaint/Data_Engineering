@@ -1,8 +1,6 @@
-from sqlalchemy import Column, BigInteger, DateTime, Integer,Text, func
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, BigInteger, DateTime, Integer,Text, func, String
+from db import Base
 
-
-Base = declarative_base()
 
 class TennisMatch(Base):
 
@@ -15,13 +13,13 @@ class TennisMatch(Base):
   player2Id = Column(Integer)
   tournamentId = Column(Integer)
   match_winner = Column(Integer)
-  result = Column(Integer)
+  result = Column(String)
   player1_fullId = Column(Integer)
-  player1_name = Column(Text)
-  player1_country_acr = Column(Text)
+  player1_name = Column(String)
+  player1_country_acr = Column(String)
   player2_full_id = Column(Integer)
-  player2_name = Column(Text)
-  player2_country_acr = Column(Text)
+  player2_name = Column(String)
+  player2_country_acr = Column(String)
   addition = Column(Integer)
   created_at = Column(DateTime, default=func.now())
   updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
