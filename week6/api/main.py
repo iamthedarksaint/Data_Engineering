@@ -6,6 +6,7 @@ from db import engine, SessionLocal
 from pydantic import BaseModel
 from datetime import date, datetime
 from sqlalchemy import inspect
+import uvicorn
 
 app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
@@ -122,3 +123,7 @@ async def delete(player_id: int, db: db_dependencies):
   db.delete(existing_player)
   db.commit()
   return {f"detail": "Player with {player_id} deleted successfully"}
+
+if __name__ == "__main__":
+  uvicorn.run("main:app",
+  host = "0.0.0.0", port=8000, reload=True)
