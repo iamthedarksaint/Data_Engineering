@@ -1,6 +1,5 @@
-Week 5: FastAPI, PostgreSQL, and API Testing
-
 Project Overview
+
 In Week 5, the focus was on building a solid API layer using FastAPI that interacts with a PostgreSQL database. The aim was to implement basic CRUD operations, ensure data integrity, and test the API rigorously.
 
 Key Accomplishments:
@@ -18,7 +17,7 @@ Postman: For testing API endpoints.
 How to Run Week 5 Project:
 
 Clone the Repository:
-git clone https://github.com/your-username/week5-project.git
+git clone https://github.com/iamthedarksaint/week5.git
 
 Install Dependencies:
 pip install -r requirements.txt
