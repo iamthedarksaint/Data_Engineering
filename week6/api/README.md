@@ -28,4 +28,4 @@ Run the FastAPI Application Locally:
 
 uvicorn main:app --reload
 Live API Testing:
-The API is also accessible at sofascoreapi.vercel.app on Vercel.
+The API is also accessible at https://sofascoreapi.vercel.app/docs on Vercel.
