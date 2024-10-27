@@ -1,4 +1,5 @@
 Project Overview
+
 Building on the API work from Week 5, Week 6 was all about moving from a local setup to the cloud. I transitioned the data warehouse to Supabase, making it accessible globally, and hosted the API on Vercel for public testing.
 
 Key Accomplishments:
