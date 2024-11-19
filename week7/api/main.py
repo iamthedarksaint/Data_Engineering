@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List, Annotated
-import models
+import models as models
 from db import engine, SessionLocal
 from pydantic import BaseModel
 from datetime import date, datetime
@@ -84,7 +84,7 @@ async def update(player_id: int, column_name: str, new_value: str, db: db_depend
   edit_player = db.query(models.TennisMatch).filter(models.TennisMatch.id ==  player_id).first()
 
   if not edit_player:
-    raise HTTPException(status=404, detail="Player not found")
+    raise HTTPException(status_code=404, detail="Player not found")
 
   mapper = inspect(models.TennisMatch)
   column = mapper.columns.get(column_name)
@@ -118,7 +118,7 @@ async def update(player_id: int, column_name: str, new_value: str, db: db_depend
 async def delete(player_id: int, db: db_dependencies):
   existing_player = db.query(models.TennisMatch).filter(models.TennisMatch.id ==  player_id).first()
   if not existing_player:
-    raise HTTPException(status=404, detail="Player not found")
+    raise HTTPException(status_code=404, detail="Player not found")
   
   db.delete(existing_player)
   db.commit()
