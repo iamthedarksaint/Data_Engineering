@@ -1,0 +1,9 @@
+sqlalchemy
+python-decouple
+psycopg2-binary
+pandas
+postgres
+fastapi
+uvicorn
+pydantic
+
